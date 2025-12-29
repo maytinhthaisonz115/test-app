@@ -12,7 +12,7 @@ pipeline {
       agent {
         docker {
           image 'node:20-alpine'
-          label "jenkins-worker"
+          reusenote true
         }
       }
       steps {
