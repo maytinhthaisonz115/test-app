@@ -32,7 +32,7 @@ pipeline {
       steps {
         sh '''
           docker rm -f hello-jenkins || true
-          docker run -d --name hello-jenkins -p 3000:3000 hello-jenkins:${BUILD_NUMBER}
+          docker run -d --name hello-jenkins TN -p 3000:3000 hello-jenkins:${BUILD_NUMBER}
         '''
       }
     }
